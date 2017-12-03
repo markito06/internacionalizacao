@@ -1,3 +1,4 @@
+package app;
 import static spark.Spark.before;
 import static spark.Spark.delete;
 import static spark.Spark.exception;

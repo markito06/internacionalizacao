@@ -1,3 +1,4 @@
+package app;
 import model.*;
 import spark.*;
 import spark.template.velocity.*;
