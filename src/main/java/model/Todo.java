@@ -1,17 +1,20 @@
 package model;
 
-import lombok.*;
-import java.util.*;
+import java.util.UUID;
 
-@Data
-@AllArgsConstructor
 public class Todo {
 
     String title;
     String id;
     Status status;
 
-    public void toggleStatus() {
+    public Todo(String title, String id, Status status) {
+		this.title = title;
+		this.id = id;
+		this.status = status;
+	}
+
+	public void toggleStatus() {
         this.status = isComplete() ? Status.ACTIVE : Status.COMPLETE;
     }
 
@@ -22,5 +25,26 @@ public class Todo {
     public static Todo create(String title) {
         return new Todo(title, UUID.randomUUID().toString(), Status.ACTIVE);
     }
+
+	public void setTitle(String title) {
+		this.title = title;
+		
+	}
+	
+	public String getTitle() {
+		return this.title;
+	}
+
+	public Status getStatus() {
+		return status;
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
 
 }

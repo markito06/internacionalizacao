@@ -16,6 +16,9 @@
                 <li>
                     <button name="locale" style="color: hotpink; text-decoration: underline; "value="en">$msg.get("EN")</button>
                 </li>
+                <li>
+                    <button name="locale" style="color: hotpink; text-decoration: underline; "value="es">$msg.get("ES")</button>
+                </li>
             </form>
      </ul>
     

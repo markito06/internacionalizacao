@@ -25,6 +25,7 @@ import util.MessageBundle;
  * This class contains exactly the same functionality as TodoList, but it's
  * following normal Spark conventions more closely.
  */
+@SuppressWarnings({ "unchecked", "rawtypes", "serial" })
 public class BasicTodoList {
 
 	public static void main(String[] args) {
@@ -33,7 +34,7 @@ public class BasicTodoList {
 
 		exception(Exception.class, (e, req, res) -> e.printStackTrace()); // print all exceptions
 		staticFiles.location("/public");
-		port(9999);
+		port(7777);
 
 		// Render main UI
 		get("/", (req, res) -> renderTodos(req));
